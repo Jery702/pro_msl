@@ -1,0 +1,490 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+html,body{
+	background-color: #fff;
+}
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#E4E4E4;
+    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #A7A7A7),
+        color-stop(0.51, #E4E4E4)
+    );
+    background-attachment:fixed;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:0.85rem;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    width:100%;
+    color: #1f1f1f;
+}
+
+/* Portrait layout (default) */
+.app {
+    background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
+    position:absolute;             /* position in the center of the screen */
+    left:50%;
+    top:50%;
+    height:50px;                   /* text area height */
+    width:225px;                   /* text area width */
+    text-align:center;
+    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
+                                   /* offset horizontal: half of text area width */
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position:left center;
+        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
+        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
+                                      /* offset horizontal: half of image width and text area width */
+    }
+}
+@media only screen and (max-width: 320px) {
+  html {
+    font-size: 18px !important;
+  }
+}
+
+h1 {
+    font-size:1.7rem;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+}
+
+.event {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:12px;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+.event.listening {
+    background-color:#333333;
+    display:block;
+}
+
+.event.received {
+    background-color:#4B946A;
+    display:none;
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
+/*公共部分*/
+ul,ol,li{
+	list-style-type: none;
+}
+.cursor{
+	cursor:pointer ;
+}
+a{
+	color: #1e1e1e;
+}
+/*字体颜色*/
+.c-orange{
+	color: #ff5624;
+}
+.c-blue{
+	color: #157EFB;
+}
+.c-1f{
+	color: #1F1F1F;
+}
+.cfff{
+	color: #fff;
+}
+.cb4{
+	color: #b4b4b4;
+}
+.c96,
+.color-c96{
+	color: #969696;
+}
+.c-ok{
+	color: #30d0c6;
+}
+.c-3b{
+	color: #3B3B3B;
+}
+.c-red{
+	color: red;
+}
+/*背景颜色*/
+.bgf{
+	background-color: #FFFFFF;
+}
+.bg-orange_1{
+	background-color:#f9711e ;
+}
+.bg-blue_1{
+	background-color: #0894ec;
+}
+.bg-black{
+	background-color: #000000;
+}
+.bg-20{
+	background-color: #202020;
+}
+.bg-blue{
+	background-color: #129aee;
+}
+.bg-yel{
+	background-color: #ff5624;
+}
+.bgfa{
+	background-color: #fafafa;
+}
+.bg-gray{
+	background-color: #fafafa;
+}
+.bge6{
+	background-color: #E6E6E6;
+}
+.bg-green{
+	background-color: #30d0c6;
+}
+.bg-fff{
+	background-color: #ffffff;
+}
+/*图片*/
+.icon-img{
+	display: inline-block;
+	width: 1.5rem;
+	height: 1rem;
+	background-image: url(../images/icon_img.png);
+	background-size: 10rem;
+}
+.img_left{
+	background-position: -5.5rem .3rem;
+}
+.img_menu{
+	background-position: -7rem -0.27rem;
+}
+.img_more{
+	background-position: -8.5rem -1.5rem;
+}
+.img_person{
+	background-position: -8.4rem -0.3rem;
+}
+.img_pay{
+	background-position: 0rem .3rem;
+	background-size: 14rem;
+}
+.img_addr {
+    width: 1.2rem;
+    height: 1.2rem;
+    background-size: 15rem;
+    background-position: -3.2rem -0.65rem;
+}
+.img_plus {
+    width: 1.3rem;
+    height: 1.3rem;
+    background-size: 14rem;
+    background-position: -2.85rem -14.75rem;
+}
+.img_subtra {
+    width: 1.3rem;
+    height: 1.3rem;
+    background-size: 14rem;
+    background-position: -7.55rem -14.55rem;
+}
+.img_map {
+    width: 1.3rem;
+    height: 1.3rem;
+    background-size: 14rem;
+    background-position: -5.2rem -14.45rem;
+}
+.img_good{
+	width: 1.3rem;
+    height: 1.3rem;
+    background-size: 14rem;
+    background-position: -7.6rem -2.8rem;
+}
+.img_goodcolor{
+	width: 1.3rem;
+    height: 1.3rem;
+    background-size: 14rem;
+    background-position:-12.2rem -7.45rem;
+}
+/*对齐方式*/
+.text-right{
+	text-align: right;
+}
+.text-left{
+	text-align: left;
+}
+.text-center{
+	text-align: center;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+/*字体大小*/
+.f-bold{
+	font-weight: bold;
+}
+.f-1rem{
+	font-size: 1rem;
+}
+.f-095rem{
+	font-size: 0.95rem;
+}
+.f-09rem{
+	font-size: 0.9rem;
+}
+.f-085rem{
+	font-size: 0.85rem;
+}
+.f-075rem{
+	font-size: 0.75rem;
+}
+.f-07rem{
+	font-size: 0.7rem;
+}
+.f-065rem{
+	font-size: 0.65rem;
+}
+.f-06rem{
+	font-size: 0.6rem;
+}
+.f-05rem{
+	font-size: 0.5rem;
+}
+/*行高*/
+.l-h-1rem{
+	line-height: 1rem;
+}
+.l-h-2rem{
+	line-height: 2rem;
+}
+.l-h-025rem{
+	line-height: 025rem;
+}
+.l-h-025rem{
+	line-height: 2.5rem;
+}
+.l-h-015rem{
+	line-height: 1.5rem;
+}
+.m-all-0{
+	margin: 0;
+}
+.m-tb-05rem{
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+.m-t-075rem{
+	margin-top: 0.75rem;
+}
+.m-t-202rem{
+	margin-top: 2.2rem;
+}
+.m-t-0{
+	margin-top: 0;
+}
+.m-b-05rem{
+	margin-bottom: 0.5rem;
+}
+.m-b-202rem{
+	margin-bottom: 2.2rem;
+}
+.m-tb-202rem{
+	margin-top: 2.2rem;
+	margin-bottom: 2.2rem;
+}
+.m-b-3rem{
+	margin-bottom: 3rem;
+}
+.m-b-5rem{
+	margin-bottom: 5rem;
+}
+.m-l-05rem{
+	margin-left: 0.5rem;
+}
+.m-l-1rem{
+	margin-left: 1rem;
+}
+.m-l-2rem{
+	margin-left: 2rem;
+}
+.m-r-025rem{
+	margin-right: 0.25rem;
+}
+.m-r-05rem{
+	margin-right: 0.5rem;
+}
+.m-r-075rem{
+	margin-right: 0.75rem;
+}
+.p-all-0{
+	padding: 0;
+}
+.pb5{
+	padding-bottom: 5rem;
+}
+.p-tb-07rem{
+	padding-top: 0.7rem;
+	padding-bottom: 0.7rem;
+}
+.p-tb-05rem{
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+}
+.p-tb-03rem{
+	padding-top: 0.3rem;
+	padding-bottom: 0.3rem;
+}
+.p-lr-05rem{
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+}
+.p-lr-075rem{
+	padding-left: 0.75rem;
+	padding-right: 0.75rem;
+}
+.p-l-075rem{
+	padding-left: 0.75rem;
+}
+.button-yel{
+	border-color: #ff5624;
+	color: #ff5624;	
+}
+.button-gray{
+	border-color: #989898;
+	color: #989898;	
+}
+.border-bottom-e6{
+	border-bottom: 1px solid #E6E6E6;
+}
+.border-top-e6{
+	border-top: 1px solid #e7e7e7;
+}
+.block{
+	width: 100%;
+	display: block;
+}
+.col-1{
+	width: 1%;
+}
+.col-2{
+	width: 2%;
+}
+.col-94{
+	width: 94%;
+}
+.col-98{
+	width: 98%;
+}
+.wid-2{
+	width: 2rem;
+}
+.wid-5{
+	width: 5rem;
+}
+.wid-10{
+	width: 10%;
+}
+.wid-80{
+	width: 80%;
+}
+.dis-none{
+	display: none;
+}
+.dis-in-blc{
+	display: inline-block;
+}
+.dis-blc{
+	display: block;
+}
+.dis-inn{
+	display: inline;
+}
+.dis-inn-flex{
+	display: inline-flex;
+}
+.dis-flex{
+	display:flex ;
+}
+.txt-center{
+	text-align: center;
+}
+.banner-imgbox{
+	width: 100%;
+}
+.banner-imgbox img{
+	width: 100%;
+	height: 100%;
+}
+.z-15{
+	z-index: 15;
+}
+.z-20{
+	position: absolute;
+	z-index: 20;
+}
+.z-99{
+	z-index: 99;
+}
+.box-shadow-none{
+	box-shadow: none;
+}
+.text-indent{
+	text-indent: 1rem;
+}
+a:active{
+	color: #1e1e1e;
+}
+

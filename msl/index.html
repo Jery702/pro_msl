@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+		<title>首页</title>
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="static/style/css/sm.min.css">
+		<link rel="stylesheet" href="static/style/css/sm-extend.min.css">
+		<link rel="stylesheet" href="static/style/css/swiper.min.css" />
+		<link rel="stylesheet" href="static/style/css/common.css">
+		<link rel="stylesheet" href="static/style/css/index.css">
+		<!--
+        	时间：2016-12-26
+        	描述：图片放大 css
+        -->
+		<link rel="stylesheet" type="text/css" href="static/style/css/photoswipe.css" />
+		<link rel="stylesheet" type="text/css" href="static/style/css/default-skin.css" />
+		<!--
+        	时间：2016-12-26
+        	描述：图片放大css  end
+        -->
+	</head>
+
+	<body>
+		<div class="page-group">
+			<div class="page-current" id="page-login">
+				<header class="bar bar-nav bg-20">
+					<!--<a class="button button-link button-nav pull-left">
+						<span class="icon-img img_left h-head-link"></span>
+					</a>-->
+					<h1 class="title h-head-tit">牧食栗</h1>
+					<!--<a class="button button-link button-nav pull-right back">
+						<span class="icon-img img_more h-head-link"></span>
+					</a>-->
+				</header>
+				<!--搜索框-->
+				<div class="bar bar-header-secondary bg-blue">
+					<div class="searchbar msl-searchbar">
+						<a class="pull-left wid-10 txt-center" href="#page-product_list">
+							<span class="icon-img img_menu"></span>
+						</a>
+						<a class="pull-right wid-10 txt-center" href="msl_personalinfo.html">
+							<span class="icon-img img_person"></span>
+						</a>
+						<div class="search-input msl-search wid-80 dis-in-blc">
+							<label class="icon icon-search" for="search"></label>
+							<input type="search" id='search' placeholder='输入关键字...' />
+						</div>
+					</div>
+				</div>
+				<!--搜索框end-->
+				<div class="content">
+					<!-- Slider -->
+					<div class="swiper-container msl-swiper-container" data-space-between='10'>
+						<div class="swiper-wrapper">
+							<div class="swiper-slide" data-swiper-autoplay="2000"><img src="static/style/images/banner.png" alt=""></div>
+							<div class="swiper-slide" data-swiper-autoplay="2000"><img src="static/style/images/banner.png" alt=""></div>
+							<div class="swiper-slide" data-swiper-autoplay="2000"><img src="static/style/images/banner.png" alt=""></div>
+							<div class="swiper-slide" data-swiper-autoplay="2000"><img src="static/style/images/banner.png" alt=""></div>
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+					<!-- Slider end -->
+
+					<!--
+                    	时间：2016-11-17
+                    	描述：轮播
+                    -->
+					<div class="carouselbox" style="width: 100%;">
+						<div class="carouselist row  msl-sortbox mslnav" id="nav">
+							<ul style="padding: 0;">
+								<li class="">
+									<a href="msl_milkdetail.html">
+										<span class="icon-img img-drink"></span>
+										<p>鲜奶饮品</p>
+									</a>
+								</li>
+								<li class="">
+									<span class="icon-img img-actieve"></span>
+									<p>会员活动</p>
+								</li>
+								<li class="">
+									<span class="icon-img img-news"></span>
+									<p>今日新闻</p>
+								</li>
+								<li class="">
+									<span class="icon-img img-focus"></span>
+									<p>焦点关注</p>
+								</li>
+								<li class="">
+									<span class="icon-img img-foods"></span>
+									<p>美食推荐</p>
+								</li>
+								<li class="">
+									<a href="msl_milkdetail.html">
+										<span class="icon-img img-drink"></span>
+										<p>鲜奶饮品</p>
+									</a>
+								</li>
+								<li class="">
+									<span class="icon-img img-actieve"></span>
+									<p>会员活动</p>
+								</li>
+								<li class="">
+									<span class="icon-img img-news"></span>
+									<p>今日新闻</p>
+								</li>
+								<li class="">
+									<span class="icon-img img-focus"></span>
+									<p>焦点关注</p>
+								</li>
+								<li class="">
+									<span class="icon-img img-foods"></span>
+									<p>美食推荐</p>
+								</li>
+								<li class="">
+									<a href="msl_milkdetail.html">
+										<span class="icon-img img-drink"></span>
+										<p>鲜奶饮品</p>
+									</a>
+								</li>
+								<li class="">
+									<span class="icon-img img-actieve"></span>
+									<p>会员活动</p>
+								</li>
+								<li class="">
+									<span class="icon-img img-news"></span>
+									<p>今日新闻</p>
+								</li>
+								<li class="">
+									<span class="icon-img img-focus"></span>
+									<p>焦点关注</p>
+								</li>
+								<li class="">
+									<span class="icon-img img-foods"></span>
+									<p>美食推荐</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!--
+                    	时间：2016-11-17
+                    	描述：轮播end
+                    -->
+
+					<!--
+                    	时间：2016-11-17
+                    	描述：news
+                    -->
+					<div class="card facebook-card">
+						<div class="card-header no-border">
+							<a href="msl_milkdiscuss.html" external>关于肉食补肾的消息的会员的会员活会员活会员活动关于肉食补肾的消息的会员活动</a>
+						</div>
+						<div class="card-content row msl-card-content msl-imgbox my-gallery" data-pswp-uid="1" style="display: flex;">
+							<span class="col-100 msl-img-m-all-0">
+								<figure class="col-33">
+									<div class=" dis-in-blc">
+								    	<a href="static/style/images/new-1.png"  data-size="670x712" external>
+								    		<img src="static/style/images/new-1.png">
+								    	</a>
+									</div>
+								</figure>
+								<figure class="col-33">
+									<div class=" dis-in-blc">
+								    	<a href="static/style/images/new-1.png"  data-size="670x712" external>
+								    		<img src="static/style/images/new-1.png">
+								    	</a>
+									</div>
+								</figure>
+								<figure class="col-33">
+									<div class=" dis-in-blc">
+								    	<a href="static/style/images/new-1.png"  data-size="670x712" external>
+								    		<img src="static/style/images/new-1.png">
+								    	</a>
+									</div>
+								</figure>
+							</span>
+							<br />
+						</div>
+						<div class="card-footer no-border msl-cardindex">
+							<span href="#" class="link">来源：牧食栗</span>
+							<span href="#" class="link">11-17</span>
+						</div>
+					</div>
+					<div class="card facebook-card">
+						<div class="card-content row msl-card-content my-gallery" data-pswp-uid="2">
+							<span class="col-33 new_second">
+								<figure class="col-100 msl-img-m-all-0">
+									<div>
+								    	<a href="static/style/images/new-1.png" data-size="670x712" external>
+								    		<img src="static/style/images/new-1.png">
+								    	</a>
+									</div>
+								</figure>
+							</span>
+							<div class="col-66">
+								<p>关于肉食补肾的消息的会员的会员活会员活会员活动关于肉食补肾的消息的会员活动</p>
+								<span href="#" class="link">来源：牧食栗</span>
+								<span href="#" class="link">11-17</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="card facebook-card">
+						<div class="card-header no-border">
+							<span>关于肉食补肾的消息的会员的会员活会员活会员活动关于肉食补肾的消息的会员活动</span>
+						</div>
+						<div class="card-content row msl-card-content msl-video">
+							<span class="video-item"><img src="static/style/images/msl-video.png"/></span>
+						</div>
+						<div class="card-footer no-border msl-cardindex">
+							<span href="#" class="link">来源：牧食栗</span>
+							<span href="#" class="link">11-17</span>
+						</div>
+					</div>
+					<!--
+                    	时间：2016-11-17
+                    	描述：news end
+                    -->
+				</div>
+			</div>
+			<div class="page" id='page-product_list'>
+						<header class="bar bar-nav bg-20">
+							<a class="button button-link button-nav pull-left back">
+								<span class="icon-img img_left h-head-link"></span>
+							</a>
+							<h1 class="title h-head-tit">商品目录</h1>
+							<!--<a class="button button-link button-nav pull-right back">
+								<span class="icon-img img_more h-head-link"></span>
+							</a>-->
+						</header>
+						<div class="bar bar-header-secondary">
+							<div class="searchbar msl-product-searchbar">
+								<a class="searchbar-cancel msl-product-searchbar">取消</a>
+								<div class="search-input msl-product-search">
+									<label class="icon icon-search" for="search"></label>
+									<input type="search" id='search' placeholder='输入关键字...' />
+								</div>
+							</div>
+						</div>
+						<div class="content">
+							<div class="row no-gutter msl-row">
+								<div class="col-20 msl-left">
+									<div class="buttons-tab msl-buttons-tab">
+										<ul>
+											<li>
+												<a href="#tab1" class="tab-link active button">全部</a>
+											</li>
+											<li>
+												<a href="#tab2" class="tab-link button">分类1</a>
+											</li>
+											<li>
+												<a href="#tab3" class="tab-link button">分类2</a>
+											</li>
+											<li>
+												<a href="#tab4" class="tab-link button">分类3</a>
+											</li>
+											<li>
+												<a href="#tab5" class="tab-link button">分类4</a>
+											</li>
+											<li>
+												<a href="#tab6" class="tab-link button">分类5</a>
+											</li>
+										</ul>
+									</div>
+
+								</div>
+								<div class="col-80 msl-right">
+									<div class="content-block m-all-0 p-all-0">
+										<div class="tabs">
+											<div id="tab1" class="tab active msl-product-listbox">
+												<div class="card">
+													<div valign="bottom" class="card-header color-white no-border no-padding">
+														<img class='card-cover' src="static/style/images/new-1.png" alt="">
+													</div>
+													<div class="card-footer">
+														<span href="#" class="link">巴黎牛奶饼干</span>
+														<span href="#" class="link">
+													<span class="price">¥39.99</span>
+														</span>
+													</div>
+												</div>
+												<div class="card ">
+													<div valign="bottom" class="card-header color-white no-border no-padding">
+														<img class='card-cover' src="static/style/images/new-2.png" alt="">
+													</div>
+													<div class="card-footer">
+														<span href="#" class="link">巴黎牛奶饼干</span>
+														<span href="#" class="link">
+													<span class="price">¥39.99</span>
+														</span>
+													</div>
+												</div>
+												<div class="card ">
+													<div valign="bottom" class="card-header color-white no-border no-padding">
+														<img class='card-cover' src="static/style/images/new-3.png" alt="">
+													</div>
+													<div class="card-footer">
+														<span href="#" class="link">巴黎牛奶饼干</span>
+														<span href="#" class="link">
+													<span class="price">¥39.99</span>
+														</span>
+													</div>
+												</div>
+											</div>
+											<div id="tab2" class="tab msl-product-listbox">
+												<div class="card ">
+													<div valign="bottom" class="card-header color-white no-border no-padding">
+														<img class='card-cover' src="static/style/images/new-2.png" alt="">
+													</div>
+													<div class="card-footer">
+														<span href="#" class="link">巴黎牛奶饼干</span>
+														<span href="#" class="link">
+													<span class="price">¥39.99</span>
+														</span>
+													</div>
+												</div>
+												<div class="card ">
+													<div valign="bottom" class="card-header color-white no-border no-padding">
+														<img class='card-cover' src="static/style/images/new-2.png" alt="">
+													</div>
+													<div class="card-footer">
+														<span href="#" class="link">巴黎牛奶饼干</span>
+														<span href="#" class="link">
+													<span class="price">¥39.99</span>
+														</span>
+													</div>
+												</div>
+												<div class="card ">
+													<div valign="bottom" class="card-header color-white no-border no-padding">
+														<img class='card-cover' src="static/style/images/new-2.png" alt="">
+													</div>
+													<div class="card-footer">
+														<span href="#" class="link">巴黎牛奶饼干</span>
+														<span href="#" class="link">
+													<span class="price">¥39.99</span>
+														</span>
+													</div>
+												</div>
+											</div>
+											<div id="tab3" class="tab msl-product-listbox">
+												<div class="card ">
+													<div valign="bottom" class="card-header color-white no-border no-padding">
+														<img class='card-cover' src="static/style/images/new-2.png" alt="">
+													</div>
+													<div class="card-footer">
+														<span href="#" class="link">巴黎牛奶饼干</span>
+														<span href="#" class="link">
+													<span class="price">¥39.99</span>
+														</span>
+													</div>
+												</div>
+												<div class="card ">
+													<div valign="bottom" class="card-header color-white no-border no-padding">
+														<img class='card-cover' src="static/style/images/new-2.png" alt="">
+													</div>
+													<div class="card-footer">
+														<span href="#" class="link">巴黎牛奶饼干</span>
+														<span href="#" class="link">
+													<span class="price">¥39.99</span>
+														</span>
+													</div>
+												</div>
+												<div class="card ">
+													<div valign="bottom" class="card-header color-white no-border no-padding">
+														<img class='card-cover' src="static/style/images/new-2.png" alt="">
+													</div>
+													<div class="card-footer">
+														<span href="#" class="link">巴黎牛奶饼干</span>
+														<span href="#" class="link">
+													<span class="price">¥39.99</span>
+														</span>
+													</div>
+												</div>
+											</div>
+											<div id="tab4" class="tab msl-product-listbox">
+												<div class="card ">
+													<div valign="bottom" class="card-header color-white no-border no-padding">
+														<img class='card-cover' src="static/style/images/new-2.png" alt="">
+													</div>
+													<div class="card-footer">
+														<span href="#" class="link">巴黎牛奶饼干</span>
+														<span href="#" class="link">
+													<span class="price">¥39.99</span>
+														</span>
+													</div>
+												</div>
+												<div class="card ">
+													<div valign="bottom" class="card-header color-white no-border no-padding">
+														<img class='card-cover' src="static/style/images/new-2.png" alt="">
+													</div>
+													<div class="card-footer">
+														<span href="#" class="link">巴黎牛奶饼干</span>
+														<span href="#" class="link">
+													<span class="price">¥39.99</span>
+														</span>
+													</div>
+												</div>
+												<div class="card ">
+													<div valign="bottom" class="card-header color-white no-border no-padding">
+														<img class='card-cover' src="static/style/images/new-2.png" alt="">
+													</div>
+													<div class="card-footer">
+														<span href="#" class="link">巴黎牛奶饼干</span>
+														<span href="#" class="link">
+													<span class="price">¥39.99</span>
+														</span>
+													</div>
+												</div>
+											</div>
+											<div id="tab5" class="tab msl-product-listbox">
+												<div class="card ">
+													<div valign="bottom" class="card-header color-white no-border no-padding">
+														<img class='card-cover' src="static/style/images/new-2.png" alt="">
+													</div>
+													<div class="card-footer">
+														<span href="#" class="link">巴黎牛奶饼干</span>
+														<span href="#" class="link">
+													<span class="price">¥39.99</span>
+														</span>
+													</div>
+												</div>
+												<div class="card ">
+													<div valign="bottom" class="card-header color-white no-border no-padding">
+														<img class='card-cover' src="static/style/images/new-2.png" alt="">
+													</div>
+													<div class="card-footer">
+														<span href="#" class="link">巴黎牛奶饼干</span>
+														<span href="#" class="link">
+													<span class="price">¥39.99</span>
+														</span>
+													</div>
+												</div>
+												<div class="card ">
+													<div valign="bottom" class="card-header color-white no-border no-padding">
+														<img class='card-cover' src="static/style/images/new-2.png" alt="">
+													</div>
+													<div class="card-footer">
+														<span href="#" class="link">巴黎牛奶饼干</span>
+														<span href="#" class="link">
+													<span class="price">¥39.99</span>
+														</span>
+													</div>
+												</div>
+											</div>
+											<div id="tab6" class="tab msl-product-listbox">
+												<div class="card ">
+													<div valign="bottom" class="card-header color-white no-border no-padding">
+														<img class='card-cover' src="static/style/images/new-2.png" alt="">
+													</div>
+													<div class="card-footer">
+														<span href="#" class="link">巴黎牛奶饼干</span>
+														<span href="#" class="link">
+													<span class="price">¥39.99</span>
+														</span>
+													</div>
+												</div>
+												<div class="card ">
+													<div valign="bottom" class="card-header color-white no-border no-padding">
+														<img class='card-cover' src="static/style/images/new-2.png" alt="">
+													</div>
+													<div class="card-footer">
+														<span href="#" class="link">巴黎牛奶饼干</span>
+														<span href="#" class="link">
+													<span class="price">¥39.99</span>
+														</span>
+													</div>
+												</div>
+												<div class="card ">
+													<div valign="bottom" class="card-header color-white no-border no-padding">
+														<img class='card-cover' src="static/style/images/new-2.png" alt="">
+													</div>
+													<div class="card-footer">
+														<span href="#" class="link">巴黎牛奶饼干</span>
+														<span href="#" class="link">
+													<span class="price">¥39.99</span>
+														</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+			</div>
+		</div>
+		<!--
+        	时间：2016-12-26
+        	描述：img js
+        -->
+		<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="pswp__bg"></div>
+			<div class="pswp__scroll-wrap">
+				<div class="pswp__container">
+					<div class="pswp__item"></div>
+					<div class="pswp__item"></div>
+					<div class="pswp__item"></div>
+				</div>
+				<div class="pswp__ui pswp__ui--hidden">
+					<div class="pswp__top-bar">
+						<div class="pswp__counter"></div>
+						<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+						<button class="pswp__button pswp__button--share" title="Share"></button>
+						<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+						<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+						<div class="pswp__preloader">
+							<div class="pswp__preloader__icn">
+								<div class="pswp__preloader__cut">
+									<div class="pswp__preloader__donut"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+						<div class="pswp__share-tooltip"></div>
+					</div>
+					<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+					<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+					<div class="pswp__caption">
+						<div class="pswp__caption__center"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="static/js/lib/zepto.js" charset="utf-8"></script>
+		<script type="text/javascript" src="static/js/lib/sm.min.js" charset="utf-8"></script>
+		<script type="text/javascript" src="static/js/lib/sm-extend.min.js" charset="utf-8"></script>
+		<script type="text/javascript" src="static/js/lib/swiper.min.js"></script>
+		<script type="text/javascript" src="static/js/lib/touchswiper.js"></script>
+		<!--
+        	时间：2016-12-26
+        	描述：图片放大
+        -->
+		<script type="text/javascript" src="static/js/lib/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="static/js/lib/photoswipe.js"></script>
+		<script type="text/javascript" src="static/js/lib/photoswipe-ui-default.min.js"></script>
+		<script type="text/javascript" src="static/js/lib/photoswipe-bigimg.js"></script>
+		<!--
+        	时间：2016-12-26
+        	描述：图片放大  END
+        -->
+		<!--
+        	时间：2016-11-23
+        	描述：图片轮播js
+        -->
+		<script>
+			var mySwiper = new Swiper('.swiper-container', {
+				pagination: '.swiper-pagination',
+				paginationClickable: true,
+				grabCursor: true,
+				autoplay: 2000
+			});
+		</script>
+		<!--
+        	时间：2016-11-23
+        	描述：图片轮播js end
+        -->
+	</body>
+
+</html>
